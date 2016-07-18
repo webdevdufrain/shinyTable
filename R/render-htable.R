@@ -63,7 +63,7 @@ renderHtable <- function(expr, env = parent.frame(),
       
       #TODO: support updating of types, colnames, rownames, etc.
       
-      shinysession$session$sendCustomMessage("htable-change", 
+      shinysession$sendCustomMessage("htable-change", 
                                              list(id=name, 
                                                   changes=delta,
                                                   cycle=.cycleCount[[shinysession$token]][[name]]))
